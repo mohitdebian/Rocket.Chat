@@ -35,6 +35,16 @@ Rocket.Chat provides endless possibilities. Here’s an overview of the features
 
 <img src="https://global-uploads.webflow.com/611a19b9853b7414a0f6b3f6/6319c72bbd8af5c8c22efab6_heroImage.webp" data-canonical-src="https://global-uploads.webflow.com/611a19b9853b7414a0f6b3f6/6319c72bbd8af5c8c22efab6_heroImage.webp"  />
 
+# 🧭 Codebase overview
+
+Rocket.Chat is a Yarn workspaces + Turborepo monorepo. The Meteor-based app is the primary runtime, while shared packages and enterprise-only extensions live alongside it.
+
+- **apps/meteor**: Core server + web client app (Meteor) that powers the main Rocket.Chat workspace.
+- **apps/uikit-playground**: Sandbox for UI Kit components and blocks.
+- **packages/**: Shared TypeScript/Node packages for services, UI components, data models, adapters, and typings used across the repo.
+- **ee/**: Enterprise apps and packages that extend the base functionality for the EE edition.
+- **scripts/** and **development/**: Automation for builds, releases, and local developer tooling.
+
 # 💻 Deploy Rocket.Chat
 
 We support different methods of deployment for different needs. Choose your method:
